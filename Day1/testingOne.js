@@ -29,7 +29,7 @@ let books = [
     }
 ];
 
-console.log( books[2].authours[1].name )
+console.log( books[2].authours[1].name );
 console.log("Books: ");
 console.log(books);
 
@@ -40,9 +40,9 @@ console.log(books);
 let sportsman = [
     {name: 'Tennis'},
     {name: 'Booling'}
-]
+];
 
-console.log( sportsman[0].name )
+console.log( sportsman[0].name );
 
 //Test 3
 //How to make this code run?
@@ -57,9 +57,9 @@ let cars = [
         brand: "BMW",
         color: "Grey"
     }
-]
+];
 
-console.log( cars[1] )
+console.log( cars[1] );
 
 //Test 4
 //How to make this code run?
@@ -74,6 +74,6 @@ let classroom = [
             }
         ]
     }
-]
+];
 
 console.log( classroom[0].student[0] );

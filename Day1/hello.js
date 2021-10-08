@@ -91,3 +91,22 @@ console.log("personsArr[1].likes[1] : " + personsArr[1].likes[1]);
 
 
 // =-=-=- Check File testingOne.js -=-=-=
+
+console.log("=-=-=-=-=-=-[ Third Part ]-=-=-=-=-=-=");
+
+// map function w/ Arrays
+let primes = [1,3,5,7,9];
+let sumOfPrimes = 0;
+
+//map the primes array and apply print function written down
+primes.map(print);
+
+//this is the print function with single parameter
+function print(x) {
+    console.log(x);
+    sumOfPrimes += x;
+}
+
+console.log("Sum of primes: " + sumOfPrimes)
+
+

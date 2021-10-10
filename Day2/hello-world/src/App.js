@@ -14,13 +14,20 @@ function Card(props) {
   console.log(props)
   return <div className="Card">
       <h1>{props.title}</h1>
-      <p>{props.text}</p>
+      {/* <p>{props.text}</p> */}
+      <CardParagraph text={props.text}/>
       <div className="">
         {/* print special chars */}
         {/* {"{}"} */}
       </div>
     </div>
-  
+}
+
+function CardParagraph(props) {
+  console.log(props)
+  return (
+    <p>{props.text}</p>
+  );
 }
 
 export default App;

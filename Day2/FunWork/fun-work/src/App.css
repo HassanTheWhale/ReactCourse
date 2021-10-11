@@ -1,0 +1,48 @@
+.header {
+  width: 100%;
+  background-color: #fafafa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.header .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+  margin: auto;
+}
+
+.header .content h2 {
+  color: rgb(44, 68, 139);
+}
+
+.body {
+  min-height: 75vh;
+  padding: 64px;
+}
+
+.title {
+  margin-bottom: 48px;
+  text-decoration: underline;
+}
+
+.center {
+  text-align: center;
+}
+
+.flexCards {
+  display: flex;
+}
+
+.card {
+  width: 33.333%;
+  background-color: #fafafa;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  margin: 0 32px;
+  padding: 16px;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+}

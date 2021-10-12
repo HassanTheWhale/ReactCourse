@@ -2,10 +2,12 @@ import "./card.css";
 import CardParagraph from "./CardParagraph";
 
 export function Card(props) {
-  console.log(props);
+  let theme = "";
+  if (props.theme === "light") theme = "light";
+  else if (props.theme === "dark") theme = "dark";
   return (
-    <div className="Card">
-      <h1>{props.title}</h1>
+    <div className={"card " + theme}>
+      <h1 className="center">{props.title}</h1>
       <CardParagraph text={props.text} />
     </div>
   );
@@ -17,7 +19,7 @@ function BigCard(props) {
     <div className="BigCard">
       <img src={props.src} alt={props.title} />
       <div>
-        <h2>{props.title}</h2>
+        <h2 className="center">{props.title}</h2>
         <CardParagraph text={props.text} />
       </div>
     </div>

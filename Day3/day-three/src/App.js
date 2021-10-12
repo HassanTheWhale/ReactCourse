@@ -5,23 +5,36 @@ import { Card } from "./components/Card/Card";
 function App() {
   return (
     <>
+      <div className="center p-3">
+        <img
+          className="amazingLogo"
+          src="https://cdn.discordapp.com/attachments/884950893391380483/897116803245940756/72.png"
+          alt="logo"
+        />
+      </div>
       <BigCard
         title="Hello World"
-        text="Hello World, We are students in the react course that is presented by the amazing Teacher Eng. Manawer Al-Azmi"
+        text="Hello World, We are students in the react course that is presented by the amazing Teacher Eng. Manawer Al-Azmi."
         src="https://wallpaperaccess.com/full/3865610.jpg"
       />
-      <Card
-        title="First"
-        src="https://wallpaperaccess.com/full/3865610.jpg"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus maxime quisquam minima amet, non cum numquam ab quasi itaque inventore architecto ipsam qui laudantium rerum rem soluta in consequuntur sequi, mollitia reprehenderit repellendus! Totam nemo mollitia nihil dignissimos ullam explicabo sint libero quaerat maxime dolorem, itaque quod dolorum error? Voluptatem."
-      />
+
+      <div style={{ backgroundColor: "#000000", padding: 10 }}>
+        <Card
+          title="First"
+          theme="dark"
+          src="https://wallpaperaccess.com/full/3865610.jpg"
+          text="Hello World, We are students in the react course that is presented by the amazing Teacher Eng. Manawer Al-Azmi."
+        />
+      </div>
+
       <Card
         title="Second"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus maxime quisquam minima amet, non cum numquam ab quasi itaque inventore architecto ipsam qui laudantium rerum rem soluta in consequuntur sequi, mollitia reprehenderit repellendus! Totam nemo mollitia nihil dignissimos ullam explicabo sint libero quaerat maxime dolorem, itaque quod dolorum error? Voluptatem."
+        theme="light"
+        text="Hello World, We are students in the react course that is presented by the amazing Teacher Eng. Manawer Al-Azmi."
       />
       <Card
         title="Third"
-        text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus maxime quisquam minima amet, non cum numquam ab quasi itaque inventore architecto ipsam qui laudantium rerum rem soluta in consequuntur sequi, mollitia reprehenderit repellendus! Totam nemo mollitia nihil dignissimos ullam explicabo sint libero quaerat maxime dolorem, itaque quod dolorum error? Voluptatem."
+        text="Hello World, We are students in the react course that is presented by the amazing Teacher Eng. Manawer Al-Azmi."
       />
     </>
   );

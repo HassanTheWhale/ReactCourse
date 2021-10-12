@@ -1,3 +1,24 @@
+.card {
+  margin: 32px;
+  padding: 32px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.card.dark {
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.card.light {
+  color: black;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  text-indent: 16px;
+}
+
 .BigCard {
   width: 80%;
   margin: 32px auto;
@@ -9,6 +30,10 @@
 
 .BigCard div {
   padding: 16px;
+}
+
+.BigCard div p {
+  text-indent: 16px;
 }
 
 .BigCard img {

@@ -1,0 +1,16 @@
+[
+    {
+    "name": "Name Of Planet 1",
+    "desc": "Desc. Of Planet 1",
+    "distance": "100Km",
+    "theme": "dark",
+    "imgSrc": "link here"
+  },
+  {
+    "name": "Name Of Planet 2",
+    "desc": "Desc. Of Planet 2",
+    "distance": "12300Km",
+    "theme": "dark",
+    "imgSrc": "link here"
+  }
+]

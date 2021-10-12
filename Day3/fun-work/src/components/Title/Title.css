@@ -1,7 +1,7 @@
 .specialTitle {
   display: inline-block;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   color: rgb(24, 34, 63);
 }
 .specialTitle::before,
@@ -19,4 +19,11 @@
 .specialTitle::before {
   bottom: -10px;
   left: -10px;
+}
+
+.specialTitle small {
+  font-size: small;
+  text-align: center;
+  display: block;
+  margin-top: 8px;
 }

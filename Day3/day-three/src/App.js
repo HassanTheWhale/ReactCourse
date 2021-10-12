@@ -6,6 +6,11 @@ import p3 from "./imgs/p3.png";
 import p4 from "./imgs/p4.png";
 
 function App() {
+  let langs = [
+    { name: "JS", text: "JavaScript" },
+    { name: "HTML", text: "HyperTextMarkupLanguage" },
+    { name: "CSS", text: "Casecading Style Sheet" },
+  ];
   return (
     <>
       <div className="center p-3">
@@ -14,6 +19,11 @@ function App() {
           src="https://cdn.discordapp.com/attachments/884950893391380483/897116803245940756/72.png"
           alt="logo"
         />
+      </div>
+      <div className="flex">
+        {langs.map((x) => (
+          <Card title={x.name} text={x.text} />
+        ))}
       </div>
 
       <div className="flex">

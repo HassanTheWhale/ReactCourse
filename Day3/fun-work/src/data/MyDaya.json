@@ -3,27 +3,26 @@
   "name": "Desem",
   "text": "Ready for Fun Fact?",
   "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608383388078120/desem.jpg"
-},
-{
-  "name": "Spelt Flour",
-  "text": "Are you sure?",
-  "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608739216060416/download.jpg"
-},
-{
-  "name": "Whole Wheat",
-  "text": "I did it 😈",
-  "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608598081896468/download.jpg"
-},
-{
-  "name": "Brown Rice",
-  "text": "Easy as Easy ❤",
-  "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608973832818688/photo.jpg"
-}
-,
-{
-  "name": "Bread Machine",
-  "text": "Special thanks to those who made us have insomnia :D",
-  "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897609182004543548/Bread-tin-GettyImages-82753685-5911546d3df78c9283ee09b1.jpg"
-}
-
+  },
+  {
+    "name": "Spelt Flour",
+    "text": "Are you sure?",
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608739216060416/download.jpg"
+  },
+  {
+    "name": "Whole Wheat",
+    "text": "I did it 😈",
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608598081896468/download.jpg"
+  },
+  {
+    "name": "Brown Rice",
+    "text": "Easy as Easy ❤",
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608973832818688/photo.jpg"
+  }
+  ,
+  {
+    "name": "Bread Machine",
+    "text": "Special thanks to those who made us have insomnia :D",
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897609182004543548/Bread-tin-GettyImages-82753685-5911546d3df78c9283ee09b1.jpg"
+  }
 ]

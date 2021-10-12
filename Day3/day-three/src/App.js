@@ -1,6 +1,6 @@
 import "./App.css";
-import BigCard from "./components/Card";
-import { Card } from "./components/Card";
+import BigCard from "./components/Card/Card";
+import { Card } from "./components/Card/Card";
 
 function App() {
   return (

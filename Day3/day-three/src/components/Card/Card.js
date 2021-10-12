@@ -1,3 +1,4 @@
+import "./card.css";
 import CardParagraph from "./CardParagraph";
 
 export function Card(props) {

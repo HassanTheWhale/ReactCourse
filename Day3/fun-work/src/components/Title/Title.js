@@ -1,3 +1,5 @@
+import './Title.css'
+
 function Title(props) {
     return (
         <h2 className="specialTitle">

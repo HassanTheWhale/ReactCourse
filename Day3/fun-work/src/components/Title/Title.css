@@ -1,0 +1,22 @@
+.specialTitle {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 2rem;
+  color: rgb(24, 34, 63);
+}
+.specialTitle::before,
+.specialTitle::after {
+  content: "";
+  background: royalblue;
+  position: absolute;
+  width: 50%;
+  height: 2px;
+}
+.specialTitle::after {
+  top: -10px;
+  right: -10px;
+}
+.specialTitle::before {
+  bottom: -10px;
+  left: -10px;
+}

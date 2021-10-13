@@ -13,7 +13,7 @@ export function Card(props) {
 }
 
 function BigCard(props) {
-  console.log(props);
+  // console.log(props);
   return (
     <div className="BigCard">
       <img src={props.src} alt={props.title} />

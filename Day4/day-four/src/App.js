@@ -29,6 +29,23 @@ function App() {
     setCount(document.getElementById("number").value);
   }
 
+  let init = "welcome";
+  if (window.localStorage.getItem("firstName") != null) {
+    init = window.localStorage.getItem("firstName");
+  }
+
+  let [firstName, setFName] = useState(init);
+
+  function setfirstName(x) {
+    console.log(window.localStorage.getItem("name"));
+    setFName(x.target.value);
+  }
+
+  function saveName() {
+    alert("Name has been Saved!");
+    window.localStorage.setItem("firstName", firstName);
+  }
+
   return (
     <>
       <div className="center p-3">
@@ -45,6 +62,11 @@ function App() {
         <button onClick={decrease}>decrease</button>
         <button onClick={reset}>reset</button>
         <p>{counter}</p>
+        <br />
+        <br />
+        <button onClick={saveName}>Save First Name</button> &nbsp;
+        <input type="text" value={firstName} onChange={setfirstName} />
+        <p>{firstName}</p>
       </div>
       <div className="flex">
         {langs.map((x) => (

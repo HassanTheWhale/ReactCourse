@@ -20,8 +20,7 @@ function App() {
     setInput("");
   }
   function remove(x) {
-    let newWhales = whales.filter((result) => result.id !== x.id);
-    setWhales(newWhales);
+    setWhales(whales.filter((result) => result.id !== x.id));
   }
   function show(x) {
     setBigCard({ name: x.name, id: x.id });

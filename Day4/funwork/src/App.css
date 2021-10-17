@@ -1,0 +1,52 @@
+.container {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  padding: 32px 0;
+}
+
+body {
+  background: #fafafa;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.col-left,
+.col-right {
+  margin: 16px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.col-left {
+  width: 70%;
+}
+
+.col-right {
+  width: 30%;
+}
+
+.billTable {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.billTable th {
+  padding-bottom: 16px;
+}
+.billTable td {
+  padding: 8px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.billTable tr.bold {
+  font-weight: bold;
+}

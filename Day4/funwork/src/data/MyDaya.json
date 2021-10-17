@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Desem",
+    "price": 2,
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608383388078120/desem.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Spelt Flour",
+    "price": 14,
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608383388078120/desem.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Whole Wheat",
+    "price": 32,
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608598081896468/download.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Brown Rice",
+    "price": 12,
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897608973832818688/photo.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Bread Machine",
+    "price": 52,
+    "imgSrc": "https://cdn.discordapp.com/attachments/884950893391380483/897609182004543548/Bread-tin-GettyImages-82753685-5911546d3df78c9283ee09b1.jpg"
+  }
+]

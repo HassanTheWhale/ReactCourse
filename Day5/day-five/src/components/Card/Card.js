@@ -4,7 +4,7 @@ export function BigCard(props) {
   let obj = props.object;
   return (
     <div className="BigCard">
-      <h3 className="title">{obj.name}</h3>
+      <h3 className="title">Name: {obj.name}</h3>
       <p>ID: {obj.id}</p>
     </div>
   );

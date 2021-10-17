@@ -6,25 +6,25 @@ import Card, { BigCard } from "./components/Card/Card";
 function App() {
   const [input, setInput] = useState("");
   const [whales, setWhales] = useState([]);
-  const [bigCard, setBigCard] = useState([]);
+  const [bigCard, setBigCard] = useState({ name: "N/A", id: "N/A" });
   function inputOnChange(props) {
     setInput(props.target.value);
   }
   function addToList() {
     if (input === "") return;
-    let newWhales = [...whales];
-    newWhales.push({ name: input, id: "Card" + (whales.length + 1) });
-    setWhales(newWhales);
+    whales.push({
+      name: input,
+      id: "Card" + whales.length,
+    });
+    setWhales([...whales]);
+    setInput("");
   }
   function remove(x) {
-    let newWhales = [...whales];
-    newWhales.splice(x.id, 1);
+    let newWhales = whales.filter((result) => result.id !== x.id);
     setWhales(newWhales);
   }
   function show(x) {
-    console.log(x);
-    let newBigWhale = [{ name: x.name, id: x.id }];
-    setBigCard(newBigWhale);
+    setBigCard({ name: x.name, id: x.id });
   }
 
   return (
@@ -45,15 +45,13 @@ function App() {
             <Title name="MyWhales" small="🐳🐳🐳"></Title>
           </div>
           <div className="BigCard">
-            {bigCard.map((x) => {
-              return <BigCard object={x} />;
-            })}
+            <BigCard object={bigCard} />;
           </div>
           <div className="cards">
             {whales.map((x, i) => {
               return (
                 <Card
-                  key={"keyCard" + (i + 1)}
+                  key={"keyCard" + i}
                   object={x}
                   func={remove}
                   funcShow={show}

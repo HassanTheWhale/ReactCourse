@@ -1,15 +1,18 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import Title from "./components/Title/Title";
+import Card from "./components/Card/Card";
+import myData from "./data/MyDaya.json";
 import { useState, useEffect } from "react";
 import { Button } from "reactstrap";
 import axios from "axios";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+
+import { useSpring, animated } from "react-spring";
 
 function App() {
-  const [votes, setVotes] = useState(0);
-
-  function increaseTotal() {
-    setVotes(votes + 1);
-  }
+  const [bill, setBill] = useState([]);
+  const [price, setPrice] = useState(0);
 
   const [myCat, setMyCat] = useState({});
 
@@ -33,49 +36,131 @@ function App() {
     });
   }
 
+  const [flip, set] = useState(false);
+  const props = useSpring({
+    to: { opacity: 1 },
+    from: { opacity: 0 },
+    reset: true,
+    reverse: flip,
+    delay: 100,
+    onRest: () => set(!flip),
+  });
   return (
-    <>
-      <Button color="success" onClick={reFetch}>
-        Refresh!
-      </Button>
+    <Router>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/users">Users</Link>
+          </li>
+        </ul>
+      </nav>
+      <section className="container">
+        {/* left section */}
+        <section className="col-left">
+          <animated.div style={props}>I will fade in</animated.div>
+          <div className="center">
+            <Title name="Menu" small="Best Food Ever" />
+          </div>
+          <Button color="success" onClick={reFetch}>
+            Refresh!
+          </Button>
+          <img src={myCat.url} width="50%" alt="Cat" />
+          <div>
+            {myData.map((x, i) => {
+              return (
+                <Card
+                  key={"Menu" + i}
+                  object={x}
+                  func={function add() {
+                    let myBill = [...bill];
+                    myBill.push(x);
+                    setBill(myBill);
+                    setPrice(price + x.price);
+                  }}
+                />
+              );
+            })}
+          </div>
+        </section>
 
-      <img src={myCat.url} width="50%" alt="Cat" />
-      <h2 className="center">عدد الأصوات</h2>
-      <h3 className="center">{votes}</h3>
-      <div className="flex">
-        <Card title="للي يستحق" total={increaseTotal} type="a" />
-        <Card title="أعضاء جمعية مشرف" total={increaseTotal} type="b" />
-        <Card title="ولد عمي" total={increaseTotal} type="c" />
-      </div>
-    </>
+        {/* right section */}
+        <section className="col-right">
+          <div className="center">
+            <Title name="Your Bill" small="Pay before order :D" />
+            <table className="billTable">
+              <thead>
+                <tr>
+                  <th>Name Of Item</th>
+                  <th>Price (KWD)</th>
+                  <th>Remove</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {bill.map((x, i) => {
+                  return (
+                    <tr key={"bill" + i}>
+                      <td>{x.name}</td>
+                      <td>{x.price}</td>
+                      <td>
+                        <span
+                          style={{
+                            cursor: "pointer",
+                          }}
+                          onClick={function remove() {
+                            setPrice(price - x.price);
+                            let myBill = [...bill];
+                            myBill.splice(i, 1);
+                            setBill(myBill);
+                          }}
+                        >
+                          ❌
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+                <tr key="price" className="bold">
+                  <td>Total Price</td>
+                  <td>{price} &nbsp; KWD</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </section>
+    </Router>
   );
 }
 
-function Card(props) {
-  const [counter, setCounter] = useState(0);
-  function increase() {
-    setCounter(counter + 1);
-    // props.total();
-  }
+function Home() {
+  return <h2>Home</h2>;
+}
 
-  console.log("----------------------");
+function About() {
+  return <h2>About</h2>;
+}
 
-  return (
-    <>
-      <div className="card">
-        <div className="amazing">
-          <div className={"head " + props.type}>
-            <div>
-              <div></div>
-            </div>
-          </div>
-        </div>
-        <h4>{props.title}</h4>
-        <h5>{counter}</h5>
-        <button onClick={increase}>Increase By 1</button>
-      </div>
-    </>
-  );
+function Users() {
+  return <h2>Users</h2>;
 }
 
 export default App;

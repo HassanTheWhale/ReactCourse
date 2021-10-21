@@ -1,36 +1,10 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import { useState, useEffect } from "react";
+import { Button } from "reactstrap";
+import axios from "axios";
 
 function App() {
-  function external(x) {
-    x("121");
-  }
-
-  function internal(y) {
-    console.log(y);
-  }
-
-  // way 1
-  function a() {
-    console.log("Calling A");
-  }
-
-  // way 2
-  let b = function () {
-    console.log("Calling B");
-  };
-
-  // way 3
-  let c = () => {
-    console.log("Calling C");
-  };
-
-  useEffect(a, []);
-  useEffect(b, []);
-  useEffect(c, []);
-  useEffect(() => external(internal), []);
-  useEffect(() => console.log("These functions will not re-render"), []);
-
   const [votes, setVotes] = useState(0);
 
   function increaseTotal() {
@@ -39,20 +13,25 @@ function App() {
 
   const [myCat, setMyCat] = useState({});
 
-  function reFetch() {}
+  console.log("main");
+
   useEffect(() => {
-    async function fetchData() {
-      let res = await fetch("https://thatcopy.pw/catapi/rest/");
-      let json = await res.json();
-      console.log(json);
-      setMyCat(json);
-    }
-    fetchData();
+    reFetch();
   }, []);
+
+  async function reFetch() {
+    console.log("refetch");
+    let res = await fetch("https://thatcopy.pw/catapi/rest/");
+    let json = await res.json();
+    setMyCat(json);
+  }
 
   return (
     <>
-      <button onClick={reFetch}></button>
+      <Button color="success" onClick={reFetch}>
+        Refresh!
+      </Button>
+
       <img src={myCat.url} width="50%" alt="Cat" />
       <h2 className="center">عدد الأصوات</h2>
       <h3 className="center">{votes}</h3>
@@ -72,7 +51,6 @@ function Card(props) {
     // props.total();
   }
 
-  console.log(props.title + ": " + counter + "\n------------------------");
   console.log("----------------------");
 
   return (

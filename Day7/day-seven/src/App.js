@@ -16,7 +16,8 @@ function App() {
   console.log("main");
 
   useEffect(() => {
-    reFetch();
+    // reFetch();
+    ax();
   }, []);
 
   async function reFetch() {
@@ -24,6 +25,12 @@ function App() {
     let res = await fetch("https://thatcopy.pw/catapi/rest/");
     let json = await res.json();
     setMyCat(json);
+  }
+
+  function ax() {
+    axios.get("https://thatcopy.pw/catapi/rest/").then((res) => {
+      setMyCat(res.data);
+    });
   }
 
   return (
